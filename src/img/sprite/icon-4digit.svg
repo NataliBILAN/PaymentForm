@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="108" height="67" viewBox="0 0 108 67">
+  <g fill="none" fill-rule="evenodd">
+    <rect width="108" height="67" fill="#3BB89A" rx="3"/>
+    <text fill="#FFF" font-family="Arial-BoldMT, Arial" font-size="8" font-weight="bold" letter-spacing=".4">
+      <tspan x="9" y="15">AMERICAN EXPRES</tspan> <tspan x="92.789" y="15">S</tspan>
+    </text>
+    <text fill="#000" font-family="Arial-BoldMT, Arial" font-size="9" font-weight="bold" letter-spacing=".5">
+      <tspan x="7" y="55">1234 123456 10000</tspan> <tspan x="95.582" y="55">0</tspan>
+    </text>
+    <text fill="#000" font-family="Arial-BoldMT, Arial" font-size="9" font-weight="bold">
+      <tspan x="78" y="36">1234</tspan>
+    </text>
+    <ellipse cx="88.5" cy="33" stroke="#F94C45" stroke-width="2" rx="15.5" ry="8"/>
+  </g>
+</svg>

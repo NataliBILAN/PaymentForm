@@ -1,0 +1,245 @@
+.payment-form {
+	padding: 30px 15px;
+
+	@media (min-width: 481px) and (max-width: 768px) {
+		position: relative;
+		padding: 45px 20px 60px;
+	}
+
+	&__title {
+		text-align: center;
+		margin-bottom: 25px;
+		font-size: 20px;
+		font-weight: normal;
+		color: $main-color;
+
+		@media (min-width: 481px) and (max-width: 768px) {
+			font-size: 24px;
+		}
+	}
+
+	&__wrap {
+		@media (min-width: 481px) and (max-width: 768px) {
+			display: flex;
+			flex-direction: column;
+			width: 65%;
+			margin: 0 auto 20px;
+		}
+	}
+
+	&__payment-systems {
+		display: flex;
+		justify-content: space-between;
+		margin: 0 auto;
+		width: 220px;
+		margin-bottom: 20px;
+		list-style: none;
+
+		&__item {
+			width: 36px;
+			height: 26px;
+		}
+
+		&__icon {
+			width: 100%;
+			height: 100%;
+		}
+
+		@media (min-width: 481px) and (max-width: 768px) {
+			position: absolute;
+			top: 149px;
+			right: 147px;
+			align-items: center;
+			width: 21%;
+			margin: 0;
+		}
+	}
+
+	&__details {
+		position: relative;
+		margin-bottom: 20px;
+
+		@media (min-width: 481px) and (max-width: 768px) {
+		}
+
+		.dots {
+			font-size: 16px;
+
+			@media (min-width: 481px) and (max-width: 768px) {
+				width: 34%;
+			}
+		}
+		.cvv {
+			@media (min-width: 481px) and (max-width: 768px) {
+				width: 36%;
+			}
+		}
+
+		.zip {
+			@media (min-width: 481px) and (max-width: 768px) {
+				width: 34%;
+			}
+		}
+
+		.zip-mobile {
+			@media (min-width: 768px) {
+				display: none;
+			}
+		}
+
+		.zip-desktop {
+			display: none;
+
+			@media (min-width: 768px) {
+				display: block;
+			}
+		}
+
+		&__cardholder-name {
+			@media (min-width: 481px) and (max-width: 768px) {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+		}
+
+		&__credentials {
+			display: flex;
+			justify-content: space-between;
+
+			.first-name,
+			.last-name {
+				width: calc(50% - 5px);
+
+				@media (min-width: 481px) and (max-width: 768px) {
+					width: 47%;
+				}
+			}
+		}
+
+		&__cardholder-name,
+		&__card-number,
+		&__expdate,
+		&__zip,
+		&__cvv {
+			@media (min-width: 481px) and (max-width: 768px) {
+				display: flex;
+				align-items: center;
+			}
+		}
+
+		&__cardholder-name,
+		&__card-number,
+		&__expdate-cvv,
+		&__zip {
+			margin-bottom: 10px;
+
+			@media (min-width: 481px) {
+				margin-bottom: 20px;
+			}
+		}
+
+		&__cvv {
+			position: relative;
+			width: 36%;
+		}
+
+		&__expdate-cvv {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		&__slash {
+			padding: 0 6px 0 8px;
+		}
+
+		&__cvv-help {
+			position: absolute;
+			top: 57%;
+			left: 79%;
+			color: $icon-color;
+			cursor: pointer;
+			font-size: 12px;
+		}
+
+		&__label {
+			display: inline-block;
+			margin-bottom: 5px;
+			font-weight: bold;
+
+			@media (min-width: 481px) and (max-width: 768px) {
+				margin: 0 15px 0 0;
+				white-space: nowrap;
+				// text-align: right;
+			}
+		}
+
+		&__input,
+		&__select {
+			padding-left: 10px;
+			padding-right: 7px;
+			border-radius: 3px;
+			border: 1px solid $border-color;
+			height: 30px;
+			outline: none;
+			color: $secondary-color;
+		}
+
+		&__input {
+			width: 100%;
+			transition: border-color .2s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+			&:hover {
+				border-color: #333;
+			}
+
+			.error {
+				background-color: $white-color;
+			}
+		}
+	}
+
+	&__paypal {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 20px;
+		padding: 10px 15px;
+		border-radius: 6px;
+		background-color: $background-color;
+		border: 1px solid #dddddd;
+
+		&__link {
+			display: block;
+			width: 102px;
+			height: 38px;
+			background-image: url('../img/paypal-mobile.png');
+			background-repeat: no-repeat;
+			background-position: center;
+			border-radius: 3px;
+		}
+
+		@media (min-width: 481px) and (max-width: 768px) {
+			width: 65%;
+			margin-left: auto;
+			font-size: 16px;
+		}
+	}
+
+	&__subscription {
+		width: 100%;
+		padding: 12px 10px;
+		border-radius: 3px;
+		background-image: linear-gradient(0deg, #ff7600 0%, #ffa300 100%);
+		border: 1px solid #fd7722;
+		text-align: center;
+		color: $white-color;
+		font-weight: bold;
+
+		@media (min-width: 481px) and (max-width: 768px) {
+			display: block;
+			width: 72%;
+			margin-left: auto;
+		}
+	}
+}
