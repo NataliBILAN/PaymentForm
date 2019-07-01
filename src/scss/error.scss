@@ -2,16 +2,165 @@
 	border: 1px solid $error-color;
 }
 
-#firstname-error {
+#firstname-error,
+#lastname-error,
+#cardnumber-error,
+#expmonth-error,
+#expyear-error,
+#cvv-error,
+#zipcode-error {
 	position: absolute;
-	top: 50%;
-	left: 50%;
-	padding: 10px;
-	width: 200px;
-	height: 46px;
+	width: 170px;
+	height: 36px;
+	line-height: 36px;
+	box-sizing: border-box;
 	border-radius: 3px;
 	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12);
 	color: $error-color;
 	background-color: $error-background-color;
-	font-size: 13px;
+	text-align: center;
+	font-size: 11px;
+
+	&::after,
+	&::before {
+		content: '';
+		position: absolute;
+		bottom: -17px;
+		right: 50%;
+		border: solid transparent;
+		width: 0;
+	}
+
+	&::before {
+		border-top-color: $error-color;
+		border-width: 8px;
+		margin-right: -8px;
+	}
+	&::after {
+		border-top-color: $error-background-color;
+		border-width: 10px;
+		margin-right: -10px;
+	}
+}
+
+#firstname-error {
+	top: -23px;
+	left: -12px;
+}
+
+#lastname-error {
+	top: -23px;
+	left: 132px;
+}
+
+#cardnumber-error {
+	top: 38px;
+	left: 60px;
+}
+
+#expmonth-error {
+	top: 101px;
+	left: -14px;
+}
+
+#expyear-error {
+	top: 100px;
+	left: 71px;
+}
+
+#cvv-error {
+	top: -22px;
+	left: -15px;
+}
+
+#zipcode-error {
+	top: 176px;
+	left: 60px;
+}
+
+@media screen and (min-width: 768px) {
+	#firstname-error {
+		top: -42px;
+		left: 143px;
+	}
+
+	#lastname-error {
+		top: -42px;
+		left: 320px;
+	}
+
+	#cardnumber-error {
+		top: 7px;
+		left: 143px;
+	}
+
+	#expmonth-error {
+		top: 56px;
+		left: 72px;
+	}
+
+	#expyear-error {
+		top: 56px;
+		left: 213px;
+	}
+
+	#cvv-error {
+		top: -42px;
+		left: 50px;
+	}
+
+	#zipcode-error {
+		top: 107px;
+		left: 144px;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	#firstname-error,
+	#lastname-error,
+	#cardnumber-error,
+	#expmonth-error,
+	#expyear-error,
+	#cvv-error,
+	#zipcode-error {
+		width: 200px;
+		height: 46px;
+		line-height: 46px;
+		font-size: 13px;
+	}
+
+	#firstname-error {
+		top: -52px;
+		left: 100px;
+	}
+
+	#lastname-error {
+		top: -52px;
+		left: 304px;
+	}
+
+	#cardnumber-error {
+		top: 4px;
+		left: 100px;
+	}
+
+	#expmonth-error {
+		top: 49px;
+		left: 78px;
+	}
+
+	#expyear-error {
+		top: 49px;
+		left: 160px;
+	}
+
+	#cvv-error {
+		top: -51px;
+		left: 15px;
+	}
+
+	#zipcode-error {
+		top: 99px;
+		left: 126px;
+	}
 }

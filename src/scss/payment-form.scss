@@ -71,7 +71,6 @@
 
 	&__details {
 		position: relative;
-		margin-bottom: 20px;
 
 		.dots {
 			font-size: 16px;
@@ -107,6 +106,7 @@
 		}
 
 		&__cardholder-name {
+			position: relative;
 			@media screen and (min-width: 768px) {
 				display: flex;
 				align-items: center;

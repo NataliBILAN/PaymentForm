@@ -4701,6 +4701,11 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     return "abort" === e ? (c[f] && c[f].abort(), c[f] = b.apply(this, arguments), c[f]) : b.apply(this, arguments);
   }), a;
 });
+"use strict";
+
+function myFunction() {
+  alert('The form was submitted');
+}
 'use strict';
 
 var buttonHelp = document.querySelector('.payment-form__details__cvv-help');
@@ -4761,27 +4766,27 @@ $(function () {
     },
     messages: {
       firstname: {
-        required: 'Required field. Cant be empty'
+        required: '<b>Required field.</b> Cant be empty'
       },
       lastname: {
-        required: 'Required field. Cant be empty'
+        required: '<b>Required field.</b> Cant be empty'
       },
       cardnumber: {
-        required: 'Required field. Cant be empty',
+        required: '<b>Required field.</b> Cant be empty',
         minlength: 'It must be 16 characters long!'
       },
       expmonth: {
-        required: 'Required field. Cant be empty'
+        required: '<b>Required field.</b> Cant be empty'
       },
       expyear: {
-        required: 'Required field. Cant be empty'
+        required: '<b>Required field.</b> Cant be empty'
       },
       cvv: {
         required: '<b>Required field.<b/> Cant be empty',
         minlength: 'It must be 4 characters long!'
       },
       zipcode: {
-        required: 'Required field. Cant be empty',
+        required: '<b>Required field.</b> Cant be empty',
         minlength: 'It must be 5 characters long!'
       }
     }
