@@ -10,27 +10,25 @@ $(function() {
 			cardnumber: {
 				required: true,
 				number: true,
-				maxlength: 16
+				minlength: 16
 			},
 			expmonth: {
-				required: true,
-				maxlength: 2
+				required: true
 			},
 			expyear: {
-				required: true,
-				maxlength: 2
+				required: true
 			},
 
 			cvv: {
 				required: true,
 				number: true,
-				maxlength: 4
+				minlength: 4
 			},
 
 			zipcode: {
 				required: true,
 				number: true,
-				maxlength: 5
+				minlength: 5
 			}
 		},
 		messages: {
@@ -39,6 +37,24 @@ $(function() {
 			},
 			lastname: {
 				required: 'Required field. Cant be empty'
+			},
+			cardnumber: {
+				required: 'Required field. Cant be empty',
+				minlength: 'It must be 16 characters long!'
+			},
+			expmonth: {
+				required: 'Required field. Cant be empty'
+			},
+			expyear: {
+				required: 'Required field. Cant be empty'
+			},
+			cvv: {
+				required: '<b>Required field.<b/> Cant be empty',
+				minlength: 'It must be 4 characters long!'
+			},
+			zipcode: {
+				required: 'Required field. Cant be empty',
+				minlength: 'It must be 5 characters long!'
 			}
 		}
 	});

@@ -25,9 +25,10 @@ html(lang="en")
             svg(class='payment-form__payment-systems__icon')
               use(href='img/sprite.svg#icon-americanExpress')
 
-        form(class='payment-form__details' id='payment-form' action='#' method='post')
+        form(class='payment-form__details' id='payment-form' action='' method='get')
           div(class='payment-form__details__cardholder-name')
-            label(class='payment-form__details__label' for='lastname' for='firstname') Cardholder Name
+            label(class='payment-form__details__label' for='firstname') Cardholder Name
+            label(class='payment-form__details__label__dn' for='lastname')
             div(class='payment-form__details__credentials')
               input(class='payment-form__details__input first-name' type='text' id='firstname' name='firstname' placeholder='First Name')
               input(class='payment-form__details__input last-name' type='text' id='lastname' name='lastname' placeholder='Last Name')
@@ -65,22 +66,22 @@ html(lang="en")
                   option(value='month') 2026
                   option(value='month') 2027
             div(class='payment-form__details__cvv')
-              label(class='payment-form__details__label' for='cvv') CVV/CVC
+              label(class='payment-form__details__label label-cvv' for='cvv') CVV/CVC
               input(class='payment-form__details__input cvv' type='text' id='cvv' name='cvv' maxlength='4' placeholder='XXXX')
               i(class='payment-form__details__cvv-help far fa-question-circle' aria-hidden='true')
           label(class='payment-form__details__label zip-mobile' for='zipcode') Zip Code
           div(class='payment-form__details__zip')
             label(class='payment-form__details__label zip-desktop' for='zipcode') Zip/Postal Code
             input(class='payment-form__details__input zip' type='text' id='zipcode' name='zipcode' maxlength='5' placeholder='01001')
-          div(class='payment-form__paypal')
+          div(class='payment-form__paypal paypal-mobile')
             p(class='payment-form__paypal__title') Or pay with Paypal
             a(class='payment-form__paypal__link' href='/' title='Pay with Paypal')
+                    
           input(class='payment-form__subscription' type='submit' name='subscribe' value='Start My Subscription for $19.99/mo')
+
+        div(class='payment-form__paypal paypal-desktop')
+          p(class='payment-form__paypal__title') Or pay with Paypal
+          a(class='payment-form__paypal__link' href='/' title='Pay with Paypal')
 
       include layouts/cvv-tooltip.pug
       script(src='js/index.js')
-      //- script(src='js/tooltip.js')
-      
-      //- script(src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js")
-      //- script(src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.19.1/jquery.validate.min.js")
-      //- script(src='js/validation.js')

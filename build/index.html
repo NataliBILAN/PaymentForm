@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="css/styles.min.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"/>
+    <title>Payment Form</title>
+  </head>
+  <body>
+    <div class="payment-form">
+      <h2 class="payment-form__title">Thank you for choosing to subscribe to PDFfiller services!</h2>
+      <div class="payment-form__wrap">
+        <ul class="payment-form__payment-systems">       
+          <li class="payment-form__payment-systems__item">
+            <svg class="payment-form__payment-systems__icon">
+              <use href="img/sprite.svg#icon-visa"></use>
+            </svg>
+          </li>
+          <li class="payment-form__payment-systems__item">
+            <svg class="payment-form__payment-systems__icon">
+              <use href="img/sprite.svg#icon-masterCard"></use>
+            </svg>
+          </li>
+          <li class="payment-form__payment-systems__item">
+            <svg class="payment-form__payment-systems__icon">
+              <use href="img/sprite.svg#icon-discover"></use>
+            </svg>
+          </li>
+          <li class="payment-form__payment-systems__item">
+            <svg class="payment-form__payment-systems__icon">
+              <use href="img/sprite.svg#icon-americanExpress"></use>
+            </svg>
+          </li>
+        </ul>
+        <form class="payment-form__details" id="payment-form" action="" method="get">
+          <div class="payment-form__details__cardholder-name">
+            <label class="payment-form__details__label" for="firstname">Cardholder Name</label>
+            <label class="payment-form__details__label__dn" for="lastname"></label>
+            <div class="payment-form__details__credentials">
+              <input class="payment-form__details__input first-name" type="text" id="firstname" name="firstname" placeholder="First Name"/>
+              <input class="payment-form__details__input last-name" type="text" id="lastname" name="lastname" placeholder="Last Name"/>
+            </div>
+          </div>
+          <div class="payment-form__details__card-number">
+            <label class="payment-form__details__label" for="cardnumber">Card Number</label>
+            <input class="payment-form__details__input dots" type="text" id="cardnumber" name="cardnumber" maxlength="16" placeholder="•••• •••• •••• ••••"/>
+          </div>
+          <div class="payment-form__details__expdate-cvv">
+            <div class="payment-form__details__expdate">
+              <label class="payment-form__details__label" for="expdate">Exp. Date</label>
+              <div>
+                <select class="payment-form__details__select" id="expdate" name="expmonth"> 
+                  <option value="month" disabled="disabled" selected="selected">MM</option>
+                  <option value="month">01</option>
+                  <option value="month">02</option>
+                  <option value="month">03</option>
+                  <option value="month">04</option>
+                  <option value="month">05</option>
+                  <option value="month">06</option>
+                  <option value="month">07</option>
+                  <option value="month">08</option>
+                  <option value="month">09</option>
+                  <option value="month">10</option>
+                  <option value="month">11</option>
+                  <option value="month">12</option>
+                </select><span class="payment-form__details__slash">/  </span>
+                <select class="payment-form__details__select" id="expdate" name="expyear">
+                  <option value="month" disabled="disabled" selected="selected">YYYY</option>
+                  <option value="month">2019</option>
+                  <option value="month">2020</option>
+                  <option value="month">2021</option>
+                  <option value="month">2022</option>
+                  <option value="month">2023</option>
+                  <option value="month">2024</option>
+                  <option value="month">2025</option>
+                  <option value="month">2026</option>
+                  <option value="month">2027</option>
+                </select>
+              </div>
+            </div>
+            <div class="payment-form__details__cvv">
+              <label class="payment-form__details__label label-cvv" for="cvv">CVV/CVC</label>
+              <input class="payment-form__details__input cvv" type="text" id="cvv" name="cvv" maxlength="4" placeholder="XXXX"/><i class="payment-form__details__cvv-help far fa-question-circle" aria-hidden="true"></i>
+            </div>
+          </div>
+          <label class="payment-form__details__label zip-mobile" for="zipcode">Zip Code</label>
+          <div class="payment-form__details__zip">
+            <label class="payment-form__details__label zip-desktop" for="zipcode">Zip/Postal Code</label>
+            <input class="payment-form__details__input zip" type="text" id="zipcode" name="zipcode" maxlength="5" placeholder="01001"/>
+          </div>
+          <div class="payment-form__paypal paypal-mobile">
+            <p class="payment-form__paypal__title">Or pay with Paypal</p><a class="payment-form__paypal__link" href="/" title="Pay with Paypal"></a>
+          </div>
+          <input class="payment-form__subscription" type="submit" name="subscribe" value="Start My Subscription for $19.99/mo"/>
+        </form>
+        <div class="payment-form__paypal paypal-desktop">
+          <p class="payment-form__paypal__title">Or pay with Paypal</p><a class="payment-form__paypal__link" href="/" title="Pay with Paypal"></a>
+        </div>
+      </div>
+      <div class="cvv-tooltip">
+        <div class="cvv-tooltip__visa-mastercard">
+          <div class="cvv-tooltip__icon-wrap">
+            <svg class="cvv-tooltip__icon">
+              <use href="img/sprite.svg#icon-3digit"></use>
+            </svg>
+          </div>
+          <p class="cvv-tooltip__title">Visa, MasterCard</p>
+          <p class="cvv-tooltip__desc">3-Digit Verification Number</p>
+        </div>
+        <div class="cvv-tooltip__american-express">
+          <div class="cvv-tooltip__icon-wrap">
+            <svg class="cvv-tooltip__icon">
+              <use href="img/sprite.svg#icon-4digit"></use>
+            </svg>
+          </div>
+          <p class="cvv-tooltip__title">American Express</p>
+          <p class="cvv-tooltip__desc">4-Digit Verification Number</p>
+        </div>
+      </div>
+      <script src="js/index.js"></script>
+    </div>
+  </body>
+</html>

@@ -1,12 +1,17 @@
 .error {
-	padding: 10px;
-	color: $error-color;
 	border: 1px solid $error-color;
-	background-color: $error-background-color;
 }
 
-#lastname-error {
+#firstname-error {
 	position: absolute;
 	top: 50%;
 	left: 50%;
+	padding: 10px;
+	width: 200px;
+	height: 46px;
+	border-radius: 3px;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12);
+	color: $error-color;
+	background-color: $error-background-color;
+	font-size: 13px;
 }
