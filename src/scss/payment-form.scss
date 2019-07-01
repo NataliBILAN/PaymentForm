@@ -55,17 +55,29 @@
 		}
 
 		@media screen and (min-width: 768px) {
-			position: absolute;
-			top: 149px;
-			right: 147px;
-			align-items: center;
-			width: 21%;
-			margin: 0;
+			// position: absolute;
+			// top: 149px;
+			// right: 147px;
+			// align-items: center;
+			// width: 21%;
+			// margin: 0;
 		}
+	}
 
-		@media screen and (min-width: 1024px) {
-			right: 454px;
-			width: 15.8%;
+	.payment-systems-desktop {
+		display: none;
+
+		@media screen and (min-width: 768px) {
+			display: flex;
+			justify-content: space-between;
+			width: 31.5%;
+			margin-bottom: 0;
+		}
+	}
+
+	.payment-systems-mobile {
+		@media screen and (min-width: 768px) {
+			display: none;
 		}
 	}
 

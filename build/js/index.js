@@ -4701,11 +4701,6 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     return "abort" === e ? (c[f] && c[f].abort(), c[f] = b.apply(this, arguments), c[f]) : b.apply(this, arguments);
   }), a;
 });
-"use strict";
-
-function myFunction() {
-  alert('The form was submitted');
-}
 'use strict';
 
 var buttonHelp = document.querySelector('.payment-form__details__cvv-help');

@@ -423,6 +423,10 @@ input {
   height: 100%;
 }
 
+.payment-form .payment-systems-desktop {
+  display: none;
+}
+
 .payment-form__details {
   position: relative;
 }
@@ -783,13 +787,15 @@ input {
     align-items: center;
   }
 
-  .payment-form__payment-systems {
-    position: absolute;
-    top: 149px;
-    right: 147px;
-    align-items: center;
-    width: 21%;
-    margin: 0;
+  .payment-form .payment-systems-desktop {
+    display: flex;
+    justify-content: space-between;
+    width: 31.5%;
+    margin-bottom: 0;
+  }
+
+  .payment-form .payment-systems-mobile {
+    display: none;
   }
 
   .payment-form__details .dots {
@@ -905,11 +911,6 @@ input {
     flex-direction: row;
     justify-content: center;
     align-items: initial;
-  }
-
-  .payment-form__payment-systems {
-    right: 454px;
-    width: 15.8%;
   }
 
   .payment-form__paypal__link {
